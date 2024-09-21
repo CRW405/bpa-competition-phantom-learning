@@ -1,0 +1,57 @@
+/* Controls the main body of the home page */
+#Homepage_body {
+    background-image: url("../Images/Website_BG1.png");
+
+    filter: brightness(100%);
+    background-size: cover;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    margin: 0px;
+}
+
+/* controls the sign up div */
+#Homepage_login {
+    text-align: center;
+    float: right;
+    margin-top: 4%;
+    margin-right: 10%;
+}
+
+/* makes the google line up */
+#Homepage_google {
+    margin: auto;
+}
+
+/* controls the p on the homepage */
+#Homepage_Sample_text {
+    color: rgb(247, 243, 243);
+    width: 40%;
+    text-align: center;
+    float: left;
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+/* controls how the homepage p looks */
+#Homepage_Sample_p {
+    font-weight: 600;
+    font-size: large;
+    padding: 0px 10px;
+    text-shadow: 5px 5px 5px rgb(5, 5, 5);
+}
+
+/* controls the p's border and background */
+.homepage_p_div {
+    width: 26%;
+    border: 4px solid white;
+    border-radius: 20px;
+    background-color: rgba(57, 52, 52, 0.623);
+    /*57, 52, 52, 0.623*/
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.637);
+}
+
+.wrapper {
+    min-height: 82.5vh;
+    display: flex;
+    flex-direction: column;
+}

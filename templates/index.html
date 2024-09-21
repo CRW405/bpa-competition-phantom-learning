@@ -1,0 +1,142 @@
+<!-- done -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='Images/favicon.ico') }}" />
+    <script src="https://kit.fontawesome.com/bb84556d4f.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="Homepage_body">
+    <!-- header of the page -->
+    <header id="Homepage_header">
+        <img class="Header_logo" id="Phanton_header_logo"
+            src="{{ url_for('static', filename='Images/header_logo.svg') }}" alt="Logo" />
+        <a href="{{ url_for('helpPage') }}" class="linkcolorHelp">
+            <button class="help_center_button" style="margin-top: 2%">
+                Help Center
+            </button>
+        </a>
+        </a>
+    </header>
+    <!-- wrapper and content classes are needed for footer -->
+    <div class="wrapper">
+        <div class="content">
+            <br />
+            <br />
+            <!-- The main text on the homepage -->
+            <div id="Homepage_Sample_text" class="homepage_p_div">
+                <h1 class="text_shadow">Phanton Learning</h1>
+                <p id="Homepage_Sample_p" class="text_shadow">
+                    Phantom Learning is an exceptional online education platform
+                    offering courses in HTML and CSS, JavaScript, and Python. Students
+                    gain proficiency in creating websites using HTML and CSS,
+                    implementing diverse website features with JavaScript, and mastering
+                    data management with Python. Phantom Learning provides comprehensive
+                    hands-on courses and instructional videos, making it an excellent
+                    resource for teachers seeking to introduce coding to students at
+                    their own pace. This platform serves as an essential tool for
+                    beginners, providing them with a strong initial foothold in the
+                    world of coding.
+                </p>
+                <br />
+            </div>
+            <!-- logo in section of the page. -->
+            <!--We used flask as it helps with python  -->
+            <div id="Homepage_login" class="login_div">
+                <h1 class="login_h1">Welcome!</h1>
+                <!-- email -->
+                <form method="POST">
+                    {{ form.hidden_tag() }}
+                    <p>
+                        {{ form.email.label }}<br>
+                        {{ form.email(class_="login_input", placeholder = "✉ John.doe@gmail.com") }}
+                        {% for error in form.email.errors %}
+
+                        <span style="color: red;">{{ error }}</span><br>
+                        {% endfor %}
+                    </p>
+                    <!-- passwords -->
+                    <p>
+                        {{ form.password.label }}<br>
+                        {{ form.password(class_="login_input", placeholder = "ꗃ password") }}
+
+                        {% for error in form.password.errors %}
+                        <span style="color: red;">{{ error }}</span><br>
+                        {% endfor %}
+                    </p>
+                    <br>
+                    {% with messages = get_flashed_messages(with_categories=True) %}
+                    {% if messages %}
+                    {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                    <!-- submit -->
+                    {{ form.submit(class_="login_submit") }}
+                </form>
+                <br>
+                <!-- in case of no account. this will send them to a sign up page. -->
+                <a href="{{url_for('studentSignUp')}}">No account? Click here.</a>
+                <br>
+                <br>
+            </div>
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+
+<!-- footer of the page -->
+    <footer>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/phanton_learning_team/" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Instagram.png')}}" alt="Instagram" class="social_media">
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61553930048647" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Facebook.png')}}" alt="Facebook" class="social_media">
+        </a>
+
+        <!-- Youtube -->
+        <a href="https://www.youtube.com/@PhantonLearningTeam" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Youtube.png')}}" alt="Youtube" class="social_media">
+        </a>
+
+        <!-- X -->
+        <a href="https://twitter.com/PhantonTeam" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/X.png')}}" alt="X" class="social_media">
+        </a>
+
+        <br>
+        <img id="Phanton_footer_logo" src="{{ url_for ( 'static', filename = 'Images/footer_logo.svg')}}" alt="Logo">
+        <a class="FooterLinks" href="{{ url_for('helpPage') }}">Help Center</a>
+        <a class="FooterLinks" href="{{url_for('teacherSignUp')}}">Teacher Sign Up</a>
+        <a class="FooterLinks" href="{{url_for('aboutUs')}}">About Us</a>
+
+        <hr id="footer_hr">
+        <p>
+            We do not claim any videos as our own!
+            Some information was created with the help of ChatGPT!
+            <br>
+            6505 E Hwy 66, El Reno, OK 73036
+            <br>
+            <i>
+                ©2023-2024 Phanton Learning | All Rights Reserved
+            </i>
+        </p>
+    </footer>
+
+
+</body>
+
+</html>

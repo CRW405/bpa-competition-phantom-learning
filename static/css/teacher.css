@@ -1,0 +1,176 @@
+body{
+   height: fit-content !important;
+}
+
+/* controls the welcome div */
+#teacher_bg_div {
+   background-image: linear-gradient(270deg, #ffdd81, #d9b5b3, #c6a1b4, #b38cb4);
+   padding: 5%;
+   color: white;
+   font-size: x-large;
+   text-shadow: 2px 2px 2px black;
+   /* animation:   5s ease infinite;  */
+}
+/* controls the search btn */
+#SeachButton {
+   width: 50%;
+   height: 50px;
+   margin-top: 1%;
+   border-radius: 50px;
+   border: 4px rgba(0, 0, 0, 0.087) solid;
+   /* background-color: rgba(128, 128, 128, 0.408); */
+   background-image: linear-gradient(270deg, #ffdd81, #d9b5b3, #c6a1b4, #b38cb4);
+   text-align: center;
+   color: rgb(252, 243, 243);
+   text-shadow: 2px 2px 2px black;
+   font-weight: 600;
+   font-size: large;
+   /* padding: 0%; */
+}
+
+/* placeholder for the search bar */
+::placeholder {
+   color: rgb(252, 243, 243);
+   text-shadow: 2px 2px 2px black;
+}
+
+/* table set up */
+table, tr, th, td {
+   border: 2px solid black;
+}
+
+/* table as a whole */
+table {
+   margin: auto;
+   margin-top: 1%;
+   text-align: center;
+   width: 70%;
+   font-size: large;
+}
+
+/* sets the padding and boldness of the content */
+td {
+   font-weight: 400;
+   padding: 1%;
+}
+/* space from the footer */
+#teacher_table {
+   margin-bottom: 6%;
+}
+/* the next 2 control the zebra effect */
+tbody:nth-child(even) {
+   background-color: #7f6080d7;
+   color: aliceblue;
+}
+
+tbody:nth-child(odd) {
+   background-color: #c6a1b4;
+   color: black;
+}
+/* controls the deletion button for the table */
+.table_deletion_btn:hover{
+   border: 3px solid #b38cb4;
+   background-color: #7f6080;
+   border-collapse: collapse;
+}
+
+
+
+.table_deletion_btn{
+   border-radius: 20px;
+   border: 1px solid #7f6080;
+   background-color: #d39dd4;
+   text-align: center;
+   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.637);
+   font-weight: bold;
+   width: 55px;
+   height: 45px;
+   border-collapse: collapse;
+   color: rgb(248, 54, 54);
+}
+
+/* admin deletion */
+.table_deletion_link{
+   border-radius: 20px;
+   border: 1px solid #7f6080;
+   background-color: #d39dd4;
+   text-align: center;
+   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.637);
+   font-weight: 400;
+   width: auto;
+   padding: 3%;
+   height: 55px;
+   border-collapse: collapse;
+   color: rgb(248, 54, 54);
+}
+
+.table_deletion_link:hover{
+   border: 3px solid #b38cb4;
+   background-color: #7f6080;
+   border-collapse: collapse;
+}
+
+.admin_table{
+   width: 90%;
+}
+/* rest btn */
+.table_reset_btn{
+   border-radius: 20px;
+   border: 1px solid #7f6080;
+   background-color: #d39dd4;
+   text-align: center;
+   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.637);
+   font-weight: bold;
+   width: 65%;
+   height: 45px;
+   border-collapse: collapse;
+   color: rgb(226, 250, 14);
+}
+
+.table_reset_btn:hover{
+   border: 3px solid #b38cb4;
+   background-color: #7f6080;
+   border-collapse: collapse;
+}
+
+
+/* controls the status btn */
+.table_btn:hover {
+   border: 3px solid #b38cb4;
+   background-color: #7f6080;
+   border-collapse: collapse;
+   /* margin: 0%; */
+}
+
+.table_btn {
+   border-radius: 20px;
+   border: 1px solid #7f6080;
+   background-color: #d39dd4;
+   text-align: center;
+   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.637);
+   font-weight: bold;
+   width: 45px;
+   height: 35px;
+   border-collapse: collapse;
+}
+
+#hide {
+   display: none;
+}
+.reset_btn:visited{
+   color: black;
+}
+.reset_btn{
+   color: black;
+   border: 1px solid black;
+   border-radius: 45px;
+   padding: 5%;
+   background-color: #d39dd4;
+}
+
+/* footer */
+.wrapper {
+   min-height: auto !important;
+   display: flex;
+   flex-direction: column;
+}

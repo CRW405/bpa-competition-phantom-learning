@@ -1,0 +1,126 @@
+<!-- footer done -->
+<!-- links html done -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Activity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/css.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='Images/favicon.ico')}}">
+    <script src="https://kit.fontawesome.com/b71e9ad4ca.js" crossorigin="anonymous"></script>
+
+    <style id="lesson_style">
+        #progress_bar {
+            width: 50%;
+            text-align: center;
+            background-color: black;
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+
+        #progress_bar::-webkit-progress-bar {
+            background-color: black;
+            border-radius: 20px;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: #FFDDB1;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body id="login_body" onload="Lesson()">
+    <header id="Student_header">
+        <a href="{{ url_for('student')}}">
+            <img class="Header_logo" id="Phanton_header_logo"
+                src="{{ url_for('static', filename='Images/header_logo.svg')}}" alt="Logo">
+        </a>
+        <a href="{{ url_for('helpPage')}}" class=" linkcolorHelp"> <button class="help_center_button">Help
+                Center</button></a>
+
+
+        <button class="help_center_button linkcolorlog" onclick="logout()">
+            Log Out
+        </button>
+    </header>
+    <!-- Don't Delete this Footer -->
+    <div class="wrapper">
+        <!-- Don't Delete this Footer -->
+        <div class="content">
+            <!-- Lesson Center -->
+            <center>
+                <div id="lesson_div" style="background-color: transparent; box-shadow: none; border: none;">
+
+                </div>
+            </center>
+            <center id="prog">
+                <!-- back -->
+                <button class="lesson_buttons" name="Back Button" id="back_button" onclick="back_lesson()" disabled>
+                    <i class="fa-solid fa-backward"></i> Back
+                </button>
+
+                <!-- FINISH -->
+                <button class="lesson_buttons" name="finish Button" id="finish" onclick="finish()" disabled> FINISH
+                </button>
+
+                <!-- forward -->
+                <span id="next_to_finished"><button class="lesson_buttons" name="Next Button" id="next_button"
+                        onclick="next_lesson()">
+                        Next <i class="fa-solid fa-forward"></i>
+                    </button></span>
+                <br>
+                <br>
+                <progress id="progress_bar" value="1" min="1" max="6"> </progress>
+            </center>
+        </div>
+    </div>
+    <<footer>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/phanton_learning_team/" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Instagram.png')}}" alt="Instagram" class="social_media">
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61553930048647" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Facebook.png')}}" alt="Facebook" class="social_media">
+        </a>
+
+        <!-- Youtube -->
+        <a href="https://www.youtube.com/@PhantonLearningTeam" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Youtube.png')}}" alt="Youtube" class="social_media">
+        </a>
+
+        <!-- X -->
+        <a href="https://twitter.com/PhantonTeam" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/X.png')}}" alt="X" class="social_media">
+        </a>
+
+        <br>
+        <img id="Phanton_footer_logo" src="{{ url_for ( 'static', filename = 'Images/footer_logo.svg')}}" alt="Logo">
+        <a class="FooterLinks" href="{{ url_for('helpPage') }}">Help Center</a>
+        <a class="FooterLinks" href="{{url_for('teacherSignUp')}}">Teacher Sign Up</a>
+        <a class="FooterLinks" href="{{url_for('aboutUs')}}">About Us</a>
+
+        <hr id="footer_hr">
+        <p>
+            We do not claim any videos as our own!
+            Some information was created with the help of ChatGPT!
+            <br>
+            6505 E Hwy 66, El Reno, OK 73036
+            <br>
+            <i>
+                ©2023-2024 Phanton Learning | All Rights Reserved
+            </i>
+        </p>
+        </footer>
+
+        <script src="{{ url_for('static', filename='javascript/Python-activity.js')}}"></script>
+        <script src="{{url_for('static', filename='javascript/global.js')}}"></script>
+</body>
+
+</html>

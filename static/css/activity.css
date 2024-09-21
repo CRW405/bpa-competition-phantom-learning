@@ -1,0 +1,87 @@
+/* sets defalt color */
+body {
+    background-color: white;
+}
+
+/* the entire activity div */
+#activity_div {
+    border: 1px solid rgba(0, 0, 0, 0.427);
+    border-radius: 50px;
+    box-shadow: 1px 2px 2px 3px rgba(0, 0, 0, 0.516);
+    /* background-color: rgba(255, 255, 255, 0.226); */
+    background-color: #c6a1b4b4;
+    width: 90%;
+    height: 650px;
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+}
+
+#activity_div,
+table {
+    margin: auto;
+}
+
+/* controls the input of the activity for html */
+#actinput {
+    height: 70%;
+    width: 40%;
+    text-align: center;
+    float: left;
+    margin-left: 3%;
+}
+
+/* controls the output of the activity for html */
+#actout {
+    /* border: 1px solid black; */
+    height: 70%;
+    width: 40%;
+    margin-left: 12%;
+    text-align: center;
+    float: left;
+    position: relative;
+}
+
+/* contols the space that you write in */
+.act-textarea {
+    width: 100%;
+    height: 90%;
+    border-radius: 5%;
+    box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.516);
+    background-color: white;
+    resize: none;
+    padding: 2%;
+}
+
+/* controls the output or display */
+.act-iframe {
+    width: 100%;
+    height: 96%;
+    box-shadow: 1px 2px 2px 3px rgba(0, 0, 0, 0.516);
+    background-color: white;
+    border-radius: 5%;
+}
+
+/* controls the btn for continuation */
+#runbtn {
+    border: 1px solid rgba(0, 0, 0, 0.516);
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 1%;
+    box-shadow: 1px 4px 1px rgba(0, 0, 0, 0.516);
+    border-radius: 20px;
+    padding: 10px;
+    width: auto;
+    font-size: large;
+}
+
+#runbtn:active {
+    box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.516);
+}
+
+/* controls the footer spacing */
+.wrapper {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}

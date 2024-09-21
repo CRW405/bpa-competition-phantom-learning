@@ -1,0 +1,280 @@
+<!-- footer done -->
+<!-- links html done -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='Images/favicon.ico')}}">
+</head>
+
+<body onchange="check()">
+    <header id="Student_header">
+        <a href="{{ url_for('student')}}">
+            <img class="Header_logo" id="Phanton_header_logo" src="{{ url_for('static', filename='Images/header_logo.svg')}}" alt="Logo">
+        </a>
+        <a href="{{ url_for('helpPage')}}" class=" linkcolorHelp"> <button class="help_center_button">Help Center</button></a>
+
+
+        <button class="help_center_button linkcolorlog" onclick="logout()">
+            Log Out
+        </button>
+    </header>
+    <div class="wrapper">
+        <div class="content">
+            <center>
+
+                <!-- Changing Div -->
+                <div id="quiz_div">
+                    <!-- Title -->
+                    <div id="title_span">
+                        <h1 id="quiz_title">Quiz Two: JavaScript</h1>
+                        <hr>
+                        <p class="quiz_details">Take your time and read each question thoroughly. Good luck!</p>
+                    </div>
+                    <!-- Q1 -->
+
+                    <div class="quiz_span">
+                        <p class="quiz_question" style="margin: 0%;">1. What is JavaScript?</p>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question1"
+                                    value="Option 1"></span><label for="Option1" class="quiz_label"> A style of
+                                coffee</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question1"
+                                    value="Option 2"></span><label for="Option2" class="quiz_label"> A programming
+                                language</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question1"
+                                    value="Option 3"></span><label for="Option3" class="quiz_label">A new web
+                                browser</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question1"
+                                    value="Option 4"></span><label for="Option4" class="quiz_label">An operating
+                                system</label></div>
+                    </div>
+
+                    <!-- Q2 -->
+
+                    <div class="quiz_span">
+                        <p class="quiz_question" style="margin: 0%;">2. Which part of a for loop is responsible for
+                            repeating a block of code until a condition is met?</p>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question2"
+                                    value="Option 1"></span><label for="Option1"
+                                class="quiz_label">Initialization</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question2"
+                                    value="Option 2"></span><label for="Option2" class="quiz_label">Execution</label>
+                        </div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question2"
+                                    value="Option 3"></span><label for="Option3" class="quiz_label">Termination</label>
+                        </div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question2"
+                                    value="Option 4"></span><label for="Option4" class="quiz_label">Iteration</label>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+
+                    <div class="quiz_span">
+                        <p class="quiz_question" style="margin: 0%;">3. Why do we use functions in JavaScript?
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question3"
+                                    value="Option 1"></span><label for="Option1" class="quiz_label"> To make web pages
+                                colorful</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question3"
+                                    value="Option 2"></span><label for="Option2" class="quiz_label">To create dynamic
+                                and reusable code blocks</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question3"
+                                    value="Option 3"></span><label for="Option3" class="quiz_label">To compare two or more variables</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question3"
+                                    value="Option 4"></span><label for="Option4" class="quiz_label">To design user
+                                interfaces</label></div>
+                    </div>
+
+                    <!-- Q4 -->
+
+                    <div class="quiz_span">
+                        <p class="quiz_question" style="margin: 0%;">4. Which operator is used for addition assignment
+                            in JavaScript?
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question4"
+                                    value="Option 1"></span><label for="Option1" class="quiz_label">:=</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question4"
+                                    value="Option 2"></span><label for="Option2" class="quiz_label">==</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question4"
+                                    value="Option 3"></span><label for="Option3" class="quiz_label">+=</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question4"
+                                    value="Option 4"></span><label for="Option4" class="quiz_label">/</label></div>
+                    </div>
+
+                    <!-- Q5 -->
+
+                    <div class="quiz_span">
+                        <p class="quiz_question" style="margin: 0%;">5. In JavaScript, what does the modulus operator
+                            (%) do?
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question5"
+                                    value="Option 1"></span><label for="Option1" class="quiz_label">Multiplies two
+                                numbers</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question5"
+                                    value="Option 2"></span><label for="Option2" class="quiz_label">Returns the
+                                remainder of a division</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question5"
+                                    value="Option 3"></span><label for="Option3" class="quiz_label">Adds two
+                                numbers</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question5"
+                                    value="Option 4"></span><label for="Option4" class="quiz_label">Divides two
+                                numbers</label></div>
+                    </div>
+
+                    <!-- Q6 -->
+
+                    <div class="quiz_span">
+                        <p class="quiz_question" style="margin: 0%;">6. How do you access elements in an array?
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question6"
+                                    value="Option 1"></span><label for="Option1" class="quiz_label">By using
+                                keywords</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question6"
+                                    value="Option 2"></span><label for="Option2" class="quiz_label">By using
+                                indexes</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question6"
+                                    value="Option 3"></span><label for="Option3" class="quiz_label">By using
+                                functions</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question6"
+                                    value="Option 4"></span><label for="Option4" class="quiz_label">By using
+                                loops</label></div>
+                    </div>
+
+                    <!-- Q7 -->
+
+                    <div class="quiz_span">
+                        <p class="quiz_question" style="margin: 0%;">7. What does the while loop in JavaScript do?
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question7"
+                                    value="Option 1"></span><label for="Option1" class="quiz_label">Executes code
+                                once</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question7"
+                                    value="Option 2"></span><label for="Option2" class="quiz_label">Repeats code while a
+                                condition is true</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question7"
+                                    value="Option 3"></span><label for="Option3" class="quiz_label">Skips code based on
+                                a condition</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question7"
+                                    value="Option 4"></span><label for="Option4" class="quiz_label">Executes code
+                                forever</label></div>
+                    </div>
+
+                    <!-- Q8 -->
+
+                    <div class="quiz_span">
+                        <p class="quiz_question" style="margin: 0%;">8. What is the purpose of indexes in JavaScript?
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question8"
+                                    value="Option 1"></span><label for="Option1" class="quiz_label">Displaying
+                                images</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question8"
+                                    value="Option 2"></span><label for="Option2" class="quiz_label">Selecting a variable from an array</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question8"
+                                    value="Option 3"></span><label for="Option3" class="quiz_label">Playing
+                                audio</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question8"
+                                    value="Option 4"></span><label for="Option4" class="quiz_label">Defining colors in a
+                                webpage</label></div>
+                    </div>
+
+                    <!-- Q9 -->
+
+                    <div class="quiz_span">
+                        <p class="quiz_question" style="margin: 0%;">9. Which loop in JavaScript executes a block of
+                            code at least once before checking the condition?
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question9"
+                                    value="Option 1"></span><label for="Option1" class="quiz_label">For loop</label>
+                        </div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question9"
+                                    value="Option 2"></span><label for="Option2" class="quiz_label">While loop</label>
+                        </div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question9"
+                                    value="Option 3"></span><label for="Option3" class="quiz_label">Do-while
+                                loop</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question9"
+                                    value="Option 4"></span><label for="Option4" class="quiz_label">Infinite
+                                loop</label></div>
+                    </div>
+
+                    <!-- Q10 -->
+
+                    <div class="quiz_span">
+                        <p class="quiz_question" style="margin: 0%;">10. What is the primary function of JavaScript
+                            arrays?
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question10"
+                                    value="Option 1"></span><label for="Option1" class="quiz_label">Storing only
+                                numbers</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question10"
+                                    value="Option 2"></span><label for="Option2" class="quiz_label">Performing
+                                mathematical calculations</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question10"
+                                    value="Option 3"></span><label for="Option3" class="quiz_label">Storing and
+                                manipulating collections of data</label></div>
+                        <div class="lesson_question"><span class="quiz_radio"><input type="radio" name="Question10"
+                                    value="Option 4"></span><label for="Option4" class="quiz_label">Displaying images on
+                                a webpage</label></div>
+                    </div>
+
+
+                </div>
+                <br>
+
+                <span id="finish-to-exit"> <button class="lesson_buttons" name="Finish Button" id="finish_button"
+                        onclick="answers()"> FINISH </button> </span>
+
+                <br>
+
+
+            </center>
+        </div>
+    </div>
+
+
+    <footer>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/phanton_learning_team/" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Instagram.png')}}" alt="Instagram" class="social_media">
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61553930048647" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Facebook.png')}}" alt="Facebook" class="social_media">
+        </a>
+
+        <!-- Youtube -->
+        <a href="https://www.youtube.com/@PhantonLearningTeam" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Youtube.png')}}" alt="Youtube" class="social_media">
+        </a>
+
+        <!-- X -->
+        <a href="https://twitter.com/PhantonTeam" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/X.png')}}" alt="X" class="social_media">
+        </a>
+
+        <br>
+        <img id="Phanton_footer_logo" src="{{ url_for ( 'static', filename = 'Images/footer_logo.svg')}}" alt="Logo">
+        <a class="FooterLinks" href="{{ url_for('helpPage') }}">Help Center</a>
+        <a class="FooterLinks" href="{{url_for('teacherSignUp')}}">Teacher Sign Up</a>
+        <a class="FooterLinks" href="{{url_for('aboutUs')}}">About Us</a>
+
+        <hr id="footer_hr">
+        <p>
+            We do not claim any videos as our own!
+            Some information was created with the help of ChatGPT!
+            <br>
+            6505 E Hwy 66, El Reno, OK 73036
+            <br>
+            <i>
+                ©2023-2024 Phanton Learning | All Rights Reserved
+            </i>
+        </p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='javascript/js_quiz.js')}}"></script>
+	<script src="{{url_for('static', filename='javascript/global.js')}}"></script>
+
+    </script>
+</body>
+
+</html>

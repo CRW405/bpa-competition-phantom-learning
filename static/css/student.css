@@ -1,0 +1,180 @@
+/* adds a seperation break */
+#Student_header {
+    border-bottom: 5px solid rgba(0, 0, 0, 0.246);
+}
+
+/* Student Page */
+#total_progress_student {
+    float: left;
+    padding-left: 5%;
+    font-weight: 600;
+}
+
+#course_progress_student {
+    float: right;
+    padding-right: 10%;
+    font-weight: 600;
+}
+
+#student_bg_div {
+    background-image: linear-gradient(270deg, #ffdd81, #d9b5b3, #c6a1b4, #b38cb4);
+    padding: 5%;
+    color: white;
+    font-size: x-large;
+    text-shadow: 2px 2px 2px black;
+    animation: student_bg 5s ease infinite;
+}
+
+@keyframes student_bg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#progress_bar {
+    width: 90%;
+    text-align: center;
+    background-color: black;
+    border-radius: 20px;
+    border: 3px solid black;
+    margin-bottom: 7%;
+}
+
+#progress_bar::-webkit-progress-bar {
+    background-color: black;
+    border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+    background-color: lightgreen;
+    border-radius: 20px;
+}
+
+/* Section Titles */
+.Class_Dropdown {
+    width: 70%;
+    height: 70px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.Class_Dropdown:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.637);
+}
+
+
+/* HTML & CSS Lesson Dropdowns/Spans */
+.Lesson_Span {
+    border: 2px solid black;
+    width: 20%;
+    line-height: 3vh;
+    padding: 2%;
+    /* margin: 20px 10px; */
+    /* margin: 0px 20px; */
+    margin: 1%;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    background-image: linear-gradient(180deg, #b38cb4, #d9b5b3);
+}
+
+.Lesson_Span:hover {
+    transform: scale(1.1);
+}
+
+/* controls all dropdowns */
+.first {
+    float: left;
+    margin-left: 12%;
+}
+
+.second {
+    float: left;
+}
+
+.third {
+    float: left;
+}
+
+.Html_btn {
+    display: none;
+}
+
+.Javascript_btn {
+    display: none;
+}
+
+.Python_btn {
+    display: none;
+}
+
+.locks {
+    float: right;
+    padding-right: 2%;
+}
+
+/* Javascript */
+#Javascript_Dropdown {
+    background-image: linear-gradient(to right, #57ff95, #00999e);
+}
+
+/* Python */
+
+#Python_break {
+    margin: none;
+}
+
+#Python_Dropdown {
+    /* margin-bottom: 1%; */
+    background-image: linear-gradient(to right, #f7ff57, #9e6d00);
+}
+
+.lesson_h1 {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    margin: none;
+}
+
+.lesson_button {
+    color: white;
+    font-weight: bold;
+    background-color: #53355448;
+    border: 3px solid #53355400;
+    border-radius: 10px;
+    padding: 10px;
+    transition: border 1s ease-out 100ms;
+}
+
+.lesson_button:hover {
+    border: 3px solid #ffdd81;
+}
+
+/* HTML & CSS */
+#HTML_CSS_Dropdown {
+    margin-top: 1%;
+    background-image: linear-gradient(to right, #ff5757, #9e005d);
+}
+
+.wrapper {
+    min-height: 130vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.locked {
+    background-color: gray;
+}

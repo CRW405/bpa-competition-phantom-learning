@@ -1,0 +1,124 @@
+/* controls the entire page */
+body{
+    width: 100%;
+    background-image: linear-gradient(270deg, #ffdd81, #d9b5b3, #c6a1b4, #b38cb4);
+}
+/* helps space out footer */
+.wrapper {
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    margin: none;
+}
+
+.content{
+    margin: none;
+}
+
+#title{
+    margin-top: 0%;
+}
+#opt{
+    background-color: #b38cb4a1;
+    width: 990px;
+    border-radius: 4%;
+}
+
+#team_h1{
+    /* margin-left: 1%; */
+    margin-top: -10%;
+}
+
+/* controls the paragraph */
+#about_p{
+    width: 95%;
+    padding: 1%;
+    text-align: left;
+    font-weight: 600;
+    /* color: whitesmoke; */
+}
+
+/* controls the boxes of the workers */
+.workers_div{
+    background-color: white;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.512);
+    border: transparent;
+    border-radius: 10px;
+    width: 15%;
+    display: inline-block;
+    margin: 3%;
+
+    transition: transform ease 0.5s;
+}
+
+.workers_div:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 4px 10px 1px black;;
+}
+
+
+/* controls the img  in the big div*/
+.about_img{
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    filter: brightness(100%);
+}
+
+.about_img:hover{
+    filter: brightness(120%);
+}
+
+.titles{
+    font-style: italic;
+    font-size: medium;
+    width: 70%;
+    color: black;
+}
+
+h3{
+    color: black;
+}
+
+
+
+.inside_div{
+    width: 40%;
+    height: 55vh;
+    display: inline-block;
+    text-align: left;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+
+
+
+#inside_div_p{
+    line-height: 270%;
+    font-size: large;
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: 50px;
+    display: block;
+    text-shadow: 1px 1px  1px rgba(0, 0, 0, 0.205); 
+}
+
+#inside_div_img{
+    width: 75%;
+    border: 10px solid black;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    display: block;
+}
+
+#div_holder{
+    width: 80%;
+    border-radius: 10px;
+    margin-top: 4%;
+    box-shadow: 4px 10px 10px 4px rgba(0, 0, 0, 0.605);
+    padding-bottom: 4%;
+    background-color: white;
+}

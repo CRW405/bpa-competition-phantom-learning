@@ -1,0 +1,157 @@
+<!-- footer html done -->
+<!-- links html done -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Sign Up</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/global.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/studentSignUp.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='Images/favicon-32x32.png')}}">
+    <script src="https://kit.fontawesome.com/bb84556d4f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("dUBM_pEpneIesPilK");
+        })();
+    </script>
+</head>
+
+<body id="login_body">
+    <!-- wrapper and content are needed for the footer -->
+    <div class="wrapper">
+        <div class="content">
+            <button class="back_button" style="margin-left: 1%;">
+                <a href="{{url_for('index')}}">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+            </button>
+
+            <button class="help_center_button">
+                <a href="{{url_for('helpPage')}}" style="color: black !important;">Help Center</a>
+            </button>
+            <!-- the form needed -->
+            <center>
+                <form method="POST" id="SU_Div">
+                    {{ form.hidden_tag() }}
+
+                    <h1 class="login_h1">Welcome To Our Phamily!</h1>
+                    <p>
+                        <!-- email -->
+                        {{ form.email.label }}<br>
+                        {{ form.email(size=20) }}<br>
+                        {% for error in form.email.errors %}
+                        <span style="color: red;">{{ error }}</span><br>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        <!-- password -->
+                        {{ form.password.label }}<br>
+                        {{ form.password(size=20) }}<br>
+                        {% for error in form.password.errors %}
+                        <span style="color: red;">{{ error }}</span><br>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        <!-- confirm password -->
+                        {{ form.confirmPassword.label }}<br>
+                        {{ form.confirmPassword(size=20) }}<br>
+                        {% for error in form.confirmPassword.errors %}
+                        <span style="color: red;">{{ error }}</span><br>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        <!-- first name -->
+                        {{ form.first_name.label }}<br>
+                        {{ form.first_name(size=20) }}<br>
+                        {% for error in form.first_name.errors %}
+                        <span style="color: red;">{{ error }}</span><br>
+                        {% endfor %}
+                    </p>
+                    <!-- last name -->
+                    <p>
+                        {{ form.last_name.label }}<br>
+                        {{ form.last_name(size=20) }}<br>
+                        {% for error in form.last_name.errors %}
+                        <span style="color: red;">{{ error }}</span><br>
+                        {% endfor %}
+                    </p>
+                    <!-- class code. ONlY needed for students -->
+                    <p>
+                        {{ form.class_code.label }}<br>
+                        {{ form.class_code(size=20) }}<br>
+                        {% for error in form.class_code.errors %}
+                        <span style="color: red;">{{ error }}</span><br>
+                        {% endfor %}
+                    </p> 
+                    <!-- in case of error message. -->
+                    {% with messages = get_flashed_messages(with_categories=True) %}
+                    {% if messages %}
+                    {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                    <!-- submit form -->
+                    <p>{{ form.submit(id = "submit") }}</p>
+                    <br>
+                    <!-- return to homepage -->
+                    <a href="{{url_for('index')}}">Already Have An Account? Click Here.</a>
+                    <br><br>
+                    <!-- gp to teacher sign up -->
+                    <a href="{{url_for('teacherSignUp')}}">Not a student? Click Here.</a>
+                    <br>
+                    <br>
+                    <br>
+                </form>
+            </center>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/phanton_learning_team/" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Instagram.png')}}" alt="Instagram" class="social_media">
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61553930048647" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Facebook.png')}}" alt="Facebook" class="social_media">
+        </a>
+
+        <!-- Youtube -->
+        <a href="https://www.youtube.com/@PhantonLearningTeam" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Youtube.png')}}" alt="Youtube" class="social_media">
+        </a>
+
+        <!-- X -->
+        <a href="https://twitter.com/PhantonTeam" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/X.png')}}" alt="X" class="social_media">
+        </a>
+
+        <br>
+        <img id="Phanton_footer_logo" src="{{ url_for ( 'static', filename = 'Images/footer_logo.svg')}}" alt="Logo">
+        <a class="FooterLinks" href="{{ url_for('helpPage') }}">Help Center</a>
+        <a class="FooterLinks" href="{{url_for('teacherSignUp')}}">Teacher Sign Up</a>
+        <a class="FooterLinks" href="{{url_for('aboutUs')}}">About Us</a>
+
+        <hr id="footer_hr">
+        <p>
+            We do not claim any videos as our own!
+            Some information was created with the help of ChatGPT!
+            <br>
+            6505 E Hwy 66, El Reno, OK 73036
+            <br>
+            <i>
+                ©2023-2024 Phanton Learning | All Rights Reserved
+            </i>
+        </p>
+    </footer>
+    <script src="{{url_for('static', filename='javascript/SignUp.js')}}"></script>
+</body>
+
+</html>

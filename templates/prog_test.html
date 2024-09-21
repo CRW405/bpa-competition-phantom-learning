@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>prog test</title>
+    <!-- Include necessary CSS and JavaScript files -->
+</head>
+
+<body>
+    <!-- Your quiz content -->
+    <div id="quiz">
+        <!-- Quiz questions and options -->
+    </div>
+
+    <button id="submitQuiz">Submit Quiz</button>
+
+    <script>
+        function calculateGrade() {
+            return 99.9
+        }
+        // JavaScript code to handle the quiz and calculate grade
+        // On submit, send the grade to Flask backend
+        document.getElementById('submitQuiz').addEventListener('click', function () {
+            // Calculate grade
+            const grade = calculateGrade(); // Implement this function
+
+            // Send grade to Flask backend using fetch or XMLHttpRequest
+            fetch('/submit_grade', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ grade }),
+            })
+                .then(response => {
+                    // Handle response if needed
+                })
+                .catch(error => {
+                    // Handle error
+                });
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- 
+function finish() {
+    grade = 100
+    fetch('/submit_grade', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ grade }),
+    }).then(response => {
+        if (response.ok) {
+            window.location.href = '/student'
+        } else {
+            alert('There was an error saving your progress, try again')
+        }
+    }).catch(error => {
+        alert('There was an error saving your progress, try again')
+    })
+}
+-->

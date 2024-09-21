@@ -1,0 +1,162 @@
+<!-- footer done -->
+<!-- link html done -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aboutUs.css')}}" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='Images/favicon.ico')}}">
+</head>
+<!-- header of the page -->
+<header id="Student_header">
+    <a href="{{ url_for('index')}}">
+        <img class="Header_logo" id="Phanton_header_logo"
+            src="{{ url_for('static', filename='Images/header_logo.svg')}}" alt="Logo" />
+    </a>
+    <button class="help_center_button" style="margin-top: 2%">
+        <a href="{{ url_for('helpPage')}}" class="linkcolorHelp"> Help Center</a>
+    </button>
+</header>
+
+<body>
+    <!-- wrapper and content classes are needed for the footer -->
+    <!-- Don't Delete this Footer -->
+    <div class="wrapper">
+        <!-- Don't Delete this Footer -->
+        <div class="content">
+            <center>
+                <!-- the big paragraph on the page -->
+                <div id="div_holder">
+                    <div class="inside_div">
+                        <img src="{{ url_for('static', filename='Images/About_Us_Gif.gif')}}" alt="About Us Gif"
+                            width="80%">
+                        <br>
+
+                        <h3 id="team_h1">
+                            Team: 00092769
+                            <br>
+                            Chapter: Canadian Valley Technology Center-El Reno
+                            <br>
+                            Chapter ID: 03-0051
+                        </h3>
+                        <p id="inside_div_p">Welcome to Phantom Learning, your spirited guide to conquering the digital
+                            realm! At Phantom Learning, we're on a mission to demystify coding and make it as enjoyable
+                            as a ghostly game night. Our comprehensive curriculum focuses on HTML, CSS, Javascript, and
+                            Python—the backbone of web development and programming. Whether you're a budding developer,
+                            a design maestro, or just curious about the magic behind coding, Phantom Learning is your
+                            trusted companion. So, don't be a "phantom" learner! Join us on this thrilling adventure
+                            where we turn "boo"-ring coding into an exhilarating journey. Together, let's code our way
+                            to a brighter, more exciting digital future!</p>
+                    </div>
+
+                    <!-- this is for the image with the paragraph -->
+                    <div class="inside_div">
+                        <img src="{{ url_for('static', filename='Images/Learning_with_Phanton.png')}}"
+                            alt="Learning With Phanton" id="inside_div_img">
+                    </div>
+                </div>
+
+                <!-- Crew list -->
+                <!-- Katrell -->
+                <a href="mailto: katrellstrain1@gmail.com">
+                    <div class="workers_div">
+                        <img src="{{ url_for('static', filename='Images/Katrell.png')}}" alt="" class="about_img">
+                        <h3>Katrell Strain</h3>
+                        <p class="titles">Javascript Director</p>
+                        <p class="titles">CSS Director</p>
+                        <p class="titles">HTML Developer</p>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </a>
+
+
+                <!-- Caleb -->
+                <a href="mailto:calebwiyninger@gmail.com">
+                    <div class="workers_div">
+                        <img src="{{url_for('static', filename='Images/Caleb.png')}}" alt="" class="about_img">
+                        <h3>Caleb Wiyninger</h3>
+                        <p class="titles">Flask Director</p>
+                        <p class="titles">Python Developer</p>
+                        <p class="titles">Database Developer</p>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </a>
+
+
+                <!-- Michael -->
+                <a href="mailto: michael.wilson@cvtechonline.net">
+                    <div class="workers_div">
+                        <img src="{{url_for('static', filename='Images/Mike.png')}}" alt="" class="about_img">
+                        <h3>Michael Wilson</h3>
+                        <p class="titles">Database Director</p>
+                        <p class="titles">Website Designer</p>
+                        <p class="titles">Python Developer</p>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </a>
+
+
+                <!-- Riley -->
+                <a href="mailto: 16rileyz@gmail.com">
+                    <div class="workers_div">
+                        <img src="{{ url_for('static', filename='Images/Riley.png')}}" alt="" class="about_img">
+                        <h3>Riley Zechin</h3>
+                        <p class="titles">HTML Director</p>
+                        <p class="titles">Page Designer</p>
+                        <p class="titles">Javascript Coordinator</p>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </a>
+
+        </div>
+    </div>
+    </center>
+
+    <!-- footer of the page -->
+    <footer>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/phanton_learning_team/" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Instagram.png')}}" alt="Instagram" class="social_media">
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61553930048647" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Facebook.png')}}" alt="Facebook" class="social_media">
+        </a>
+
+        <!-- Youtube -->
+        <a href="https://www.youtube.com/@PhantonLearningTeam" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/Youtube.png')}}" alt="Youtube" class="social_media">
+        </a>
+
+        <!-- X -->
+        <a href="https://twitter.com/PhantonTeam" target="_blank">
+            <img src="{{ url_for ( 'static', filename = 'Images/X.png')}}" alt="X" class="social_media">
+        </a>
+
+        <br>
+        <img id="Phanton_footer_logo" src="{{ url_for ( 'static', filename = 'Images/footer_logo.svg')}}" alt="Logo">
+        <a class="FooterLinks" href="{{ url_for('helpPage') }}">Help Center</a>
+        <a class="FooterLinks" href="{{url_for('teacherSignUp')}}">Teacher Sign Up</a>
+        <a class="FooterLinks" href="{{url_for('aboutUs')}}">About Us</a>
+
+        <hr id="footer_hr">
+        <p>
+            We do not claim any videos as our own!
+            Some information was created with the help of ChatGPT!
+            <br>
+            6505 E Hwy 66, El Reno, OK 73036
+            <br>
+            <i>
+                ©2023-2024 Phanton Learning | All Rights Reserved
+            </i>
+        </p>
+    </footer>
+</body>
+
+</html>

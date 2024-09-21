@@ -1,0 +1,98 @@
+/* the main div */
+#contact_div
+{
+    background-color: white;
+    border: 3px solid white;
+    box-shadow: 2px 2px 2px 2px  rgba(0, 0, 0, 0.452);
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 1%;
+    width: 20%;
+    padding: 2%; 
+}
+
+/* inputs */
+.help_center_input
+{
+    width: 80%;
+    height: 40px;
+    margin-top: 10%;
+    border: 1px solid white;
+    border-bottom: 3px solid black;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+.help_center_input:focus
+{
+    border: transparent;
+    border-bottom: 3px solid #B38CB4;
+}
+
+#inputText
+{
+    resize: none;
+    height: 150px; 
+}
+
+/* submit */
+#help_center_submit
+{
+    width: 70px;
+    height: 30px;
+    margin: 5%;
+    margin-left: 0%;
+    border-radius: 0%;
+    border: transparent;
+    background-color: #B38CB4;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+#help_center_clear
+{
+    width: 70px;
+    height: 30px;
+    margin: 5%;
+    margin-left: 0%;
+    border-radius: 0%;
+    border: transparent;
+    background-color: #B38CB4;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+#help_center_submit:hover, #help_center_clear:hover
+{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.452);
+    transform: scale(1.2);
+}
+
+#help_center_submit:active
+{
+    background-color: #876987;
+}
+
+#help_center_copyright
+{
+    font-size: 11px !important;
+    font-style: italic;
+}
+
+/* footer */
+.wrapper {
+    min-height: 98vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact{
+    float: center;
+    margin-left: auto;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}

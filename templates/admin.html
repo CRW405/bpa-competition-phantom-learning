@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/global.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/teacher.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/student.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='Images/favicon-32x32.png')}}">
+    <script src="https://kit.fontawesome.com/b71e9ad4ca.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b71e9ad4ca.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body id="teacher_body">
+    <header id="Student_header">
+        <a href="{{ url_for('index') }}">
+            <img class="Header_logo" id="Phanton_header_logo"
+                src="{{ url_for('static', filename='Images/header_logo.svg') }}" alt="Logo" />
+        </a>
+        <button class="help_center_button" style="margin-top: 2%">
+            <a href="{{ url_for('helpPage') }}" class="linkcolorHelp"> Help Center</a>
+        </button>
+        <button class="help_center_button linkcolorlog" style="margin-top: 2%" onclick="logout()">
+            Log Out
+        </button>
+    </header>
+    <div id="box"></div>
+    <div class="wrapper">
+        <div class="content">
+            <!-- Welcome Section -->
+            <div id="student_bg_div">
+                <h1>Welcome, admin: {{first}} {{last}}</h1>
+                <h1>Administration</h1>
+            </div>
+
+            <center>
+                <input type="text" class="input-field" onkeyup="resetSearch()" id="SeachButton"
+                    placeholder="Search Users">
+            </center>
+
+            <form>
+                <table id="teacher_table" class="admin_table">
+                    <tbody>
+                        <tr>
+                            <th>ID</th>
+                            <th>User Name</th>
+                            <th>Email</th>
+                            <th>Account Type</th>
+                            <th>Class Code</th>
+                            <th>Delete</th>
+                            <th>Reset Password</th>
+                        </tr>
+                    </tbody>
+                    {%for user in all%}
+                    <tbody>
+                        <tr>
+                            <td>{{user[0]}}</td>
+                            <td  class="search">{{user[3]}} {{user[4]}}</td>
+                            <td class="search">{{user[1]}}</td>
+                            <td class="search">
+                                {%if user[5] == 1%}
+                                Teacher
+                                {%else%}
+                                Student
+                                {%endif%}
+                            </td>
+                            <td>{{user[6]}}</td>
+                            <td rowspan="5"><a class="table_deletion_link" href="{{url_for('admin_delete', email=user[1], code=user[6])}}">Delete</a></td>
+                            <td rowspan="5"><a href="{{url_for('reset', email=user[1], place='admin')}}" class="reset_btn">Reset Password</a></td>
+                    </tbody>
+                    {%endfor%}
+                </table>
+            </form>
+            <footer>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/phanton_learning_team/" target="_blank">
+                    <img src="{{ url_for ( 'static', filename = 'Images/Instagram.png')}}" alt="Instagram"
+                        class="social_media">
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61553930048647" target="_blank">
+                    <img src="{{ url_for ( 'static', filename = 'Images/Facebook.png')}}" alt="Facebook"
+                        class="social_media">
+                </a>
+
+                <!-- Youtube -->
+                <a href="https://www.youtube.com/@PhantonLearningTeam" target="_blank">
+                    <img src="{{ url_for ( 'static', filename = 'Images/Youtube.png')}}" alt="Youtube"
+                        class="social_media">
+                </a>
+
+                <!-- X -->
+                <a href="https://twitter.com/PhantonTeam" target="_blank">
+                    <img src="{{ url_for ( 'static', filename = 'Images/X.png')}}" alt="X" class="social_media">
+                </a>
+
+                <br>
+                <img id="Phanton_footer_logo" src="{{ url_for ( 'static', filename = 'Images/footer_logo.svg')}}"
+                    alt="Logo">
+                <a class="FooterLinks" href="{{ url_for('helpPage') }}">Help Center</a>
+                <a class="FooterLinks" href="{{url_for('teacherSignUp')}}">Teacher Sign Up</a>
+                <a class="FooterLinks" href="{{url_for('aboutUs')}}">About Us</a>
+
+                <hr id="footer_hr">
+                <p>
+                    We do not claim any videos as our own!
+                    Some information was created with the help of ChatGPT!
+                    <br>
+                    6505 E Hwy 66, El Reno, OK 73036
+                    <br>
+                    <i>
+                        ©2023-2024 Phanton Learning | All Rights Reserved
+                    </i>
+                </p>
+            </footer>
+            <script src="{{url_for('static', filename='javascript/global.js')}}"></script>
+            <script src="{{url_for('static', filename='javascript/teacher.js')}}"></script>
+            <script src="{{url_for('static', filename='javascript/student.js')}}"></script>
+            <script src="{{url_for('static', filename='javascript/reset.js')}}"></script>
+
+</body>
+
+</html>
